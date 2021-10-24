@@ -6,6 +6,8 @@ class Applications{
     +main;
 }
 class ApplicationsController{
+    -ArrayList<String> todoList
+
     -Button addTodoListButton;
     -Button buttonSaveName;
     -DatePicker date;
@@ -22,28 +24,81 @@ class ApplicationsController{
     -TableColumn<?, ?> tableComplete;
     -TableColumn<?, ?> tableDate;
     -TableColumn<?, ?> tableDescription;
+    -TextField editInfoCompleted;
+    -Button editDataButton
+    -DatePicker editedDate
+    -TextField editedDescription
+    -TextField lineNumberEditInformation
+    +ArrayList<String> getTodoList
     +CompletedButtonClicked(ActionEvent event)
-    +clickAddTodoList(ActionEvent event)
+    +String removeClicked(ActionEvent event)
+    +showAllClicked(ActionEvent event)
+    +int clickedEditInformation(ActionEvent event)
+    +String clickAddTodoList(ActionEvent event)
     +clickedSaveFile(ActionEvent event)
     +clickedSaveName(ActionEvent event)
     +clickedShowUncompleted(ActionEvent event)
     +newFileClicked(ActionEvent event)
     +openFileClicked(ActionEvent event)
-    +removeClicked(ActionEvent event)
-    +showAllClicked(ActionEvent event)
-    +typedDescription(ActionEvent event)
-    +typedMonth(ActionEvent event)
-    +typedRemoveNum(ActionEvent event)
-    +typedTitle(ActionEvent event)
+
 }
-class TodoListModify{
-    -ArrayList<String> listOfDescriptions
-    -ArrayList<String> listOfDates
-    -ArrayList<Integer> listOfCompleted
+class addItems{
+    -ArrayList<String> newTodoList
+    +ArrayList<String> addTask(String date,String description, int completed )
+}
+class removeItems{
+    -ArrayList<String> newTodoList
+    +ArrayList<String> removeTask(int indexNumber)
+}
+class openNewFile{
+    +openNewFile(String fileName)
+
+}
+class saveFile{
+     +saveFile(String fileName)
+}
+class showNonCompleted{
+    +showNonCompleted()
+}
+class showAll{
+     +showAll()
+}
+class showCompleted{
+    +showComplete()
+}
+class openFile{
+    +openFile(String fileName)
+}
+class setTitle{
+   +String setTitle(String title)
+
+}
+class editDate{
+    -ArrayList<String> newTodoList
+    +ArrayList<String> editDate(String newDate ,int index)
+
+}
+class editDescription{
+    -ArrayList<String> newTodoList
+    +ArrayList<String> editDescription(String newDescription, int index)
+}
+class editCompleted{
+    -ArrayList<String> newTodoList
+    +ArrayList<String> editCompleted(int completed, int index)
 
 }
 
 Applications --- ApplicationsController
-Applications --- TodoListModify
-ApplicationsController --- TodoListModify
+ApplicationsController <|-- addItems
+ApplicationsController <|-- removeItems
+ApplicationsController <|-- openNewFile
+ApplicationsController <|-- saveFile
+ApplicationsController <|-- showNonCompleted
+ApplicationsController <|-- showAll
+ApplicationsController <|-- showCompleted
+ApplicationsController <|-- openFile
+ApplicationsController <|-- setTitle
+ApplicationsController <|-- editDate
+ApplicationsController <|-- editDescription
+ApplicationsController <|-- editCompleted
 @enduml
