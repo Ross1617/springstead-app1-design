@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Applications{
+    +start;
+    +main;
+}
+class ApplicationsController{
+    -Button addTodoListButton;
+    -Button buttonSaveName;
+    -DatePicker date;
+    -TextField description;
+    - Button newButton;
+    -TextField newTitle;
+    -Button openButton;
+    -Button removeButton;
+    -TextField removeNumber;
+    -Button saveButton;
+    -Button showAllButton;
+    -Button showCompletedButton;
+    -Button showUncompletedButton;
+    -TableColumn<?, ?> tableComplete;
+    -TableColumn<?, ?> tableDate;
+    -TableColumn<?, ?> tableDescription;
+    +CompletedButtonClicked(ActionEvent event)
+    +clickAddTodoList(ActionEvent event)
+    +clickedSaveFile(ActionEvent event)
+    +clickedSaveName(ActionEvent event)
+    +clickedShowUncompleted(ActionEvent event)
+    +newFileClicked(ActionEvent event)
+    +openFileClicked(ActionEvent event)
+    +removeClicked(ActionEvent event)
+    +showAllClicked(ActionEvent event)
+    +typedDescription(ActionEvent event)
+    +typedMonth(ActionEvent event)
+    +typedRemoveNum(ActionEvent event)
+    +typedTitle(ActionEvent event)
+}
+class TodoListModify{
+    -ArrayList<String> listOfDescriptions
+    -ArrayList<String> listOfDates
+    -ArrayList<Integer> listOfCompleted
+
+}
+
+Applications --- ApplicationsController
+Applications --- TodoListModify
+ApplicationsController --- TodoListModify
+@enduml

@@ -5,13 +5,16 @@ package baseline;
  */
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-public class TodoList extends Application {
+
+public class Applications extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+
         Parent root =
                 FXMLLoader.load(getClass().getResource("TodoList.fxml"));
 
@@ -19,11 +22,14 @@ public class TodoList extends Application {
         stage.setTitle("Todo List"); // displayed in window's title bar
         stage.setScene(scene); // attach scene to stage
         stage.show(); // display the stage
+
     }
 
     public static void main(String[] args) {
-        // create a TipCalculator object and call its start method
+
         launch(args);
+
+
     }
 
 }
