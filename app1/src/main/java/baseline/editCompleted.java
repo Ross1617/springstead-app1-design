@@ -1,7 +1,7 @@
 package baseline;
 
 import java.util.ArrayList;
-
+//this is the class that marks if something is complete or not
 public class editCompleted extends ApplicationsController {
     ArrayList<String> newTodoList = new ArrayList<>();
     public ArrayList<String> editCompleted(int completed, int index){

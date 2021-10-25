@@ -30,14 +30,14 @@ class ApplicationsController{
     -TextField editedDescription
     -TextField lineNumberEditInformation
     +ArrayList<String> getTodoList
-    +CompletedButtonClicked(ActionEvent event)
-    +String removeClicked(ActionEvent event)
-    +showAllClicked(ActionEvent event)
+    +int CompletedButtonClicked(ActionEvent event)
+    +ArrayList<String> removeClicked(ActionEvent event)
+    +int showAllClicked(ActionEvent event)
     +int clickedEditInformation(ActionEvent event)
-    +String clickAddTodoList(ActionEvent event)
+    +ArrayList<String> clickAddTodoList(ActionEvent event)
     +clickedSaveFile(ActionEvent event)
     +clickedSaveName(ActionEvent event)
-    +clickedShowUncompleted(ActionEvent event)
+    +int clickedShowUncompleted(ActionEvent event)
     +newFileClicked(ActionEvent event)
     +openFileClicked(ActionEvent event)
 
@@ -58,13 +58,16 @@ class saveFile{
      +saveFile(String fileName)
 }
 class showNonCompleted{
-    +showNonCompleted()
+    -int counter
+    +int showNonCompleted()
 }
 class showAll{
-     +showAll()
+    -int counter
+     +int showAll()
 }
 class showCompleted{
-    +showComplete()
+    -int counter
+    +int showComplete()
 }
 class openFile{
     +openFile(String fileName)

@@ -87,17 +87,18 @@ public class ApplicationsController {
     private TableColumn<?, ?> tableDescription;
 
     @FXML
-    void CompletedButtonClicked(ActionEvent event) {
-        //calls the showCompleted function in TodoListModify
+    int CompletedButtonClicked(ActionEvent event) {
+        int number = 0;
+        //calls the showCompleted function and assigns the return to number
+        return number;
     }
 
     @FXML
-    String clickAddTodoList(ActionEvent event) {
-        String tester = " ";
+    ArrayList<String> clickAddTodoList(ActionEvent event) {
+        //creates a blank string
         //gets the information in the text boxes and adds it to a string
-        //adds each information to each arrayList
-        //calls the addTask function in TodoListModify with the parameters gotten from the text boxes
-        return tester;
+        //calls the addItems with the string and assigns the output to todoList
+        return todoList;
     }
 
     @FXML
@@ -133,8 +134,10 @@ public class ApplicationsController {
     }
 
     @FXML
-    void clickedShowUncompleted(ActionEvent event) {
-        //calls the function showUnComplete in TodoListModify
+    int clickedShowUncompleted(ActionEvent event) {
+        int number = 0;
+        //calls the function showUnComplete in TodoListModify and assign the value of return to number
+        return number;
 
     }
 
@@ -149,20 +152,20 @@ public class ApplicationsController {
     }
 
     @FXML
-    String removeClicked(ActionEvent event) {
-        String removed = "";
+    ArrayList<String> removeClicked(ActionEvent event) {
         //gets the lineNumber in the text box
         //calls the removeTask function with the lineNumber
-        //it returns the new arrayList
-        //
-
-        return removed;
+        //it returns the new arrayList and assigns it to todoList
+        return todoList;
 
     }
 
     @FXML
-    void showAllClicked(ActionEvent event) {
-        //calls the showAll function in the TodoListModify
+    int showAllClicked(ActionEvent event) {
+        int number =0;
+        //calls the showAll function in the TodoListModify and assigns the return to number
+        return number;
+
 
     }
 
